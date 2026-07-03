@@ -43,6 +43,7 @@ Common personal/global locations:
 - Codex → `~/.codex/skills/freo-publish/SKILL.md` · Cursor → `~/.cursor/skills/freo-publish/SKILL.md` · Windsurf → `~/.windsurf/skills/freo-publish/SKILL.md`
 - Other Agent-Skills agents (opencode, Gemini CLI, GitHub Copilot, Antigravity, Zed, Pi, …) each
   watch their own skills folder — check your agent's docs, or use the **Custom** scope above.
+- Or let the skills CLI place it for you (70+ agents): `npx skills add nanosolutions/freo-skills -g`
 
 ## Quick start
 1. **Already set up?** Load the key from where it persists — the saved file (the `$FREO_TOKEN` env var is per-shell and usually empty in a new session): `TOKEN=${FREO_TOKEN:-$(sed -n 's/^FREO_TOKEN=//p' ~/.config/freo/credentials 2>/dev/null)}`, then check `GET https://freo.cloud/api/me` with it. A `200` means **don't re-claim** (a fresh claim just makes a duplicate). Only claim when there's no key or it returns `401`.
