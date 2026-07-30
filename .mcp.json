@@ -1,0 +1,8 @@
+{
+    "mcpServers": {
+        "freo": {
+            "type": "http",
+            "url": "https://freo.cloud/mcp"
+        }
+    }
+}

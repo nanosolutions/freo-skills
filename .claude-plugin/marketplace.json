@@ -1,0 +1,22 @@
+{
+    "name": "freo",
+    "owner": {
+        "name": "Nano Solutions",
+        "url": "https://nanosolutions.io"
+    },
+    "metadata": {
+        "description": "The freo.cloud publishing plugin for AI coding agents.",
+        "version": "1.12.1"
+    },
+    "plugins": [
+        {
+            "name": "freo-publish",
+            "source": "./",
+            "description": "Give your agent a publish button: access-controlled links, per-viewer view tracking, self-expiring shares, and a credential scanner that blocks the publish.",
+            "homepage": "https://freo.cloud",
+            "license": "MIT",
+            "category": "productivity",
+            "strict": false
+        }
+    ]
+}

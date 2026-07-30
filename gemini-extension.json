@@ -1,0 +1,12 @@
+{
+    "name": "freo-publish",
+    "version": "1.12.1",
+    "description": "Publish what Gemini CLI just built to an access-controlled shareable link on freo.cloud — scanned for leaked credentials before the link exists.",
+    "mcpServers": {
+        "freo": {
+            "type": "http",
+            "url": "https://freo.cloud/mcp"
+        }
+    },
+    "contextFileName": "skills/freo-publish/SKILL.md"
+}

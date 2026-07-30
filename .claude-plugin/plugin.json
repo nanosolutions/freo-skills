@@ -1,0 +1,35 @@
+{
+    "name": "freo-publish",
+    "displayName": "freo.cloud — publish what your agent makes",
+    "version": "1.12.1",
+    "description": "Publish what your agent just built — a report, an HTML dashboard, a PDF, a whole static site — to an access-controlled shareable link. Every publish is scanned for leaked credentials and blocked before the link exists.",
+    "author": {
+        "name": "Nano Solutions",
+        "url": "https://nanosolutions.io"
+    },
+    "homepage": "https://freo.cloud",
+    "documentation": "https://freo.cloud/skill",
+    "license": "MIT",
+    "keywords": [
+        "publish",
+        "share",
+        "link",
+        "hosting",
+        "access-control",
+        "secret-scanning",
+        "markdown",
+        "html",
+        "pdf",
+        "static-site"
+    ],
+    "skills": [
+        "./skills/freo-publish"
+    ],
+    "mcpServers": {
+        "freo": {
+            "type": "http",
+            "url": "https://freo.cloud/mcp"
+        }
+    },
+    "strict": false
+}
