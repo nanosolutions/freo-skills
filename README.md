@@ -7,7 +7,7 @@
 Whatever it just built — a report, an HTML dashboard, a PDF, a whole static site —
 becomes an access-controlled shareable link on [freo.cloud](https://freo.cloud).
 
-[![Skill](https://img.shields.io/badge/skill-v1.12.1-00e0c6)](https://freo.cloud/api/skill/SKILL.md)
+[![Skill](https://img.shields.io/badge/skill-v1.13.0-00e0c6)](https://freo.cloud/api/skill/SKILL.md)
 [![Agents](https://img.shields.io/badge/agents-70%2B_via_Agent_Skills-6d7cff)](https://agentskills.io)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
 [![freo.cloud](https://img.shields.io/badge/freo.cloud-live-00e0c6)](https://freo.cloud)
@@ -18,14 +18,26 @@ becomes an access-controlled shareable link on [freo.cloud](https://freo.cloud).
 
 ## Install
 
-```bash
-npx skills add nanosolutions/freo-skills -g
+**Claude Code (recommended)** — one plugin: the skill, the MCP server (OAuth, no key to
+paste) and hooks that nudge updates and explain failures. Updates itself.
+
+```text
+/plugin marketplace add nanosolutions/freo-skills
+/plugin install freo-publish@freo
 ```
 
-That's it — the [Agent Skills CLI](https://github.com/vercel-labs/skills) puts the skill in the
-right folder for Claude Code, Codex, Cursor, Windsurf, opencode and 70+ other agents.
+Then run `/mcp`, pick **freo** and sign in.
+
+**Any other agent** — the [Agent Skills CLI](https://github.com/vercel-labs/skills) puts the
+skill in the right folder for Codex, Cursor, Windsurf, opencode and 70+ others:
+
+```bash
+npx skills add nanosolutions/freo-skills -g        # or straight from the domain: npx skills add https://freo.cloud
+```
+
 Then connect once (a one-time setup prompt from [https://freo.cloud/skill](https://freo.cloud/skill) — your
-agent claims its own scoped key) and you're done.
+agent claims its own scoped key) and you're done. Manual installs get no hooks or
+auto-update.
 
 **No Node? No problem.** Paste this into your agent instead and it installs itself:
 

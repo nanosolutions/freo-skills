@@ -1,0 +1,21 @@
+{
+  "description": "freo.cloud: update nudge at startup, recovery hints when a freo tool call fails.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          { "type": "command", "command": "node", "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/session-start.mjs"], "timeout": 5 }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "^mcp__(?:plugin_freo-publish_freo|freo)__.*$",
+        "hooks": [
+          { "type": "command", "command": "node", "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/tool-failure.mjs"], "timeout": 5 }
+        ]
+      }
+    ]
+  }
+}

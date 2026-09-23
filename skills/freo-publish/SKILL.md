@@ -5,12 +5,12 @@ when_to_use: Use whenever the user wants to share, post, hand off, send, or put 
 homepage: https://freo.cloud
 license: MIT
 metadata:
-  version: "1.12.1"
+  version: "1.13.0"
   source: "https://freo.cloud/api/skill/SKILL.md"
   standard: "https://agentskills.io"
 ---
 
-# Publish to freo.cloud  (v1.12.1)
+# Publish to freo.cloud  (v1.13.0)
 
 **freo.cloud** gives every published file an access-controlled share link — the owner picks who
 can view it, sees every view, and links can expire. This skill is the coding-agent way in:
@@ -142,7 +142,7 @@ Multipart form fields:
 - `access_level` — see the table below · `title` (optional) · `allowlist_emails[]` (allowlist only)
 - Optional lifecycle intent: `expires_at` (ISO date), `auto_private_after_days` (0 = never auto-private).
 
-**Limits:** each file ≤ **10 MB**, ≤ **200** files per bundle, and up to
+**Limits:** each file ≤ **10 MB** (raster images png/jpg/gif/webp/avif ≤ **50 MB**), ≤ **200** files per bundle, and up to
 **10 new documents per 24h** (publishing more returns 429 — see Errors). Allowed types:
 `md, markdown, txt, html, htm, css, js, mjs, json, pdf, svg, png, jpg, jpeg, gif, webp, avif, ico, woff, woff2, ttf, otf, map, csv, xml, wasm`.
 `paths[]` must be **relative** — never absolute or containing `..` (rejected).
@@ -305,7 +305,7 @@ bash /tmp/freo-uninstall.sh
 This file is versioned (`metadata.version` above). The freo.cloud API is backward-compatible,
 so an older skill keeps working — new capabilities just ship in new versions.
 
-- Send `X-Freo-Skill-Version: 1.12.1` on your API requests; responses include
+- Send `X-Freo-Skill-Version: 1.13.0` on your API requests; responses include
   `X-Freo-Skill-Update: none | available | required`.
 - Or check `GET https://freo.cloud/api/skill/version` → `{"version","min_supported","notes"}` (advisory only,
   HTTPS only) and compare.
