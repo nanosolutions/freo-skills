@@ -19,7 +19,7 @@ becomes an access-controlled shareable link on [freo.cloud](https://freo.cloud).
 ## Install
 
 **Claude Code (recommended)** — one plugin: the skill, the MCP server (OAuth, no key to
-paste) and hooks that nudge updates and explain failures. Updates itself.
+paste) and hooks that nudge updates and explain failures.
 
 ```text
 /plugin marketplace add nanosolutions/freo-skills
